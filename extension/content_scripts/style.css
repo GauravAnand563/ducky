@@ -1,0 +1,30 @@
+.ducky {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  height: 150px;
+  width: 150px;
+  overflow: hidden;
+  margin: 0 auto;
+  user-select: none;
+}
+
+.ducky #duck {
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+  position: relative;
+  /* Based on the type of animation, experiment with these */
+  max-width: 100px;
+  rotate: 0deg;
+  left: 47px;
+  top: 48px;
+}
+
+.ducky-is-dead #duck {
+  position: relative;
+  left: 150px;
+  top: 150px;
+}
