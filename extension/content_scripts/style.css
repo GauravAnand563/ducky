@@ -21,10 +21,44 @@
   rotate: 0deg;
   left: 47px;
   top: 48px;
+  cursor: pointer;
 }
 
 .ducky-is-dead #duck {
   position: relative;
   left: 150px;
   top: 150px;
+}
+
+#duck .tooltip {
+  visibility: hidden;
+  width: 75px;
+  background-color: #ffd527;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+  left: 13px;
+  z-index: 1;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#duck .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffd527;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+}
+
+#duck:hover .tooltip {
+  top: -40px;
+  opacity: 1;
+  visibility: visible;
 }
